@@ -1,0 +1,17 @@
+{
+    "name": "fernando/web-project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fernando Defez",
+            "email": "fernandodefez@outlook.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6"
+    }
+}
