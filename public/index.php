@@ -1,4 +1,4 @@
 <?php
 
 require '../vendor/autoload.php';
-require '../routes/web.php';
+include '../routes/web.php';

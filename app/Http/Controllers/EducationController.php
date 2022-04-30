@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class DashboardController extends Controller
+class EducationController extends Controller
 {
 
    public function __construct()
@@ -13,7 +13,7 @@ class DashboardController extends Controller
    public function index()
    {
       if (isset($_SESSION['user'])) {
-         $this->render('dashboard/dashboard', array($_SESSION['user']));
+         $this->render('dashboard/education', array($_SESSION['user']));
       } else {
          header('Location: http://project.test/login');
       }

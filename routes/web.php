@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\EducationController;
 use App\Http\Response;
 
 session_start();
@@ -34,6 +35,9 @@ if ($_SERVER['REQUEST_URI'] === "/" && $_SERVER['REQUEST_METHOD'] === 'GET') {
    $controller->destroy();
 } else if ($_SERVER['REQUEST_URI'] === "/dashboard" && $_SERVER['REQUEST_METHOD'] === 'GET') {
    $controller = new DashboardController();
+   $controller->index();
+} else if ($_SERVER['REQUEST_URI'] === "/dashboard/education" && $_SERVER['REQUEST_METHOD'] === 'GET') {
+   $controller = new EducationController();
    $controller->index();
 } else {
    $response = new Response();
